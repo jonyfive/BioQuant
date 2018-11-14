@@ -29,12 +29,11 @@ def getData(url,prefix):
         print('\nError')
     return(response.status_code)
 
-
 # MAIN===========================================================================
 tzero = time.time()  # Set inital time for runtime test
 url = ''
 prefix = ''
-status = getData(url1,url2)
+status = getData(url,prefix)
 print(status)
 print('Algo runtime is %s seconds' %
       (time.time() - tzero),'\n')  # Final code runtime
