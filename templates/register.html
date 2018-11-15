@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from "renderField.html" import render_field %}
+{% block head %}
+{{ super() }}
+	<div class="container">
+		<br>
+		<h2>Register</h2>
+		<br>
+		<form method="post">
+			<div class="form-group">
+				<dl>
+				    {{ render_field(form.username) }}
+				    {{ render_field(form.email) }}
+				    {{ render_field(form.password) }}
+				    {{ render_field(form.confirm) }}
+				    {{ render_field(form.accept_tos) }}
+  				</dl>
+  				<p><input type=submit value=Register>		
+  			</div>
+  		</form>
+	</div>
+{% endblock %}
