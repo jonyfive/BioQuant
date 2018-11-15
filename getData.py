@@ -10,7 +10,7 @@ import bz2
 from time import localtime, strftime
 
 
-def getData(url,prefix):
+def getData(prefix,url):
     s = requests.session()
     adapter = requests.adapters.HTTPAdapter(
         max_retries=5)  # Configure adapter and retries
@@ -31,9 +31,9 @@ def getData(url,prefix):
 
 # MAIN===========================================================================
 tzero = time.time()  # Set inital time for runtime test
-url = ''
 prefix = ''
-status = getData(url,prefix)
+url = ''
+status = getData(prefix,url)
 print(status)
 print('Algo runtime is %s seconds' %
       (time.time() - tzero),'\n')  # Final code runtime
